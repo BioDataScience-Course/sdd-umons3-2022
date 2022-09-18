@@ -148,11 +148,17 @@ L'ensemble de vos réponses sont collectées et utilisées afin de construire la
 
 Votre progression au sein des exercices de chaque module est mise à votre disposition à la fin de chaque module ou bien depuis Moodle.
 
+```{block, type='warning'}
+Les notes des exercices plus faciles de niveau 1 et 2 sont comptabilisés séparément des exercices plus difficiles. Il faut obtenir au moins 50% des points dans les exercices de niveau 3 et 4 pour bénéficier également de la note des exercices faciles de niveau 1 et 2. **Votre objectif est donc de bien vous préparer et de réussir vos projets, challenges et interrogations en présentiel.** Les exercices faciles vous aident à bien vous préparer. **Faites les sérieusement, c'est dans votre intérêt.**
+
+L'évaluation est **continue** tout au long de l'année. Il n'y a pas d'examen en fin d'année et il n'y a pas moyen non plus de repasser un examen en seconde session. La présence aux séances est **obligatoire** pour cette raison et toute absence in,justifiée vous coutera un zéro pour la matière concernée.
+```
+
 ### Plan du cours {.unnumbered}
 
 Le plan du cours est une forme de contrat entre l'étudiant et les encadrants. Ce document structure les attentes de vos encadrants. Veuillez consulter ce document attentivement.
 
--   [Plan du cours de Science des données biologiques III : années 2022-2023](https://github.com/BioDataScience-Course/BioDataScience-Common/blob/main/docs/plan_de_cours/sdd3_plan_cours_2022-2023.md)
+-   [Plan du cours de Science des données biologiques III : années 2022-2023](https://github.com/BioDataScience-Course/BioDataScience-Common/tree/2022-2023/docs/plan_de_cours/sdd3_plan_cours_2022-2023.md)
 
 ## Issues {#issues .unnumbered}
 
@@ -163,18 +169,34 @@ if (exists("assignment2"))
   assignment2("C00Ga_issues", part = NULL, clone = FALSE,
     url = "https://github.com/BioDataScience-Course/sdd_issues",
     course.ids = c(
-      'S-BIOG-025'         = !"C00Ga_{YY}M_issues",
+      'S-BIOG-025'         = !"C00Ga_{YY}M_issues"),
+    course.urls = c(
+      'S-BIOG-025'         = "https://classroom.github.com/a/MMeWxqzG"),
+    course.ends = c(
+      'S-BIOG-025'         = !"{W[53]+5} 23:59:59"),
+    term = "", level = 0,
+    toc = "Poser ses questions dans une issue.", n = 100,
+    texts = learnitdown::assignment2_fr(
+      title = "Pour SDD III, rejoignez le projet",
+      course = "[Projet GitHub Classroom d\u00e9di\u00e9e aux issues pour les \u00e9tudiants inscrits au cours de {course_name}]({course_url}){{target=\"_blank\"}}", 
+      alt = "Les issues ne sont pas accessibles aux \u00e9tudiants externes."))
+```
+
+```{r  assign_D00Ga_issues, echo=FALSE, results='asis'}
+if (exists("assignment2"))
+  assignment2("D00Ga_issues", part = NULL, clone = FALSE,
+    url = "https://github.com/BioDataScience-Course/sdd_issues",
+    course.ids = c(
       'S-BIOG-077'         = !"D00Ga_{YY}C_issues"),
     course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/g/s_U7VaAO",
-      'S-BIOG-077'         = "https://classroom.github.com/a/..."),
+      'S-BIOG-077'         = "hhttps://classroom.github.com/a/FQZsycUG"),
     course.ends = c(
       'S-BIOG-025'         = !"{W[53]+5} 23:59:59",
       'S-BIOG-077'         = !"{W[53]+6} 23:59:59"),
     term = "", level = 0,
     toc = "Poser ses questions dans une issue.", n = 100,
     texts = learnitdown::assignment2_fr(
-      title = "Rejoignez le projet",
+      title = "Pour SDD IV, rejoignez le projet",
       course = "[Projet GitHub Classroom d\u00e9di\u00e9e aux issues pour les \u00e9tudiants inscrits au cours de {course_name}]({course_url}){{target=\"_blank\"}}", 
       alt = "Les issues ne sont pas accessibles aux \u00e9tudiants externes."))
 ```

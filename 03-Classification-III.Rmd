@@ -121,7 +121,7 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-025'         = !"C03Ia_{YY}M_cardiovascular"),
     course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/XEjOaVvQ"),
+      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
     course.starts = c(
       'S-BIOG-025'         = !"{W[8]+2} 13:00:00"),
     course.ends = c(
@@ -223,7 +223,7 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-025'         = !"C03Ia_{YY}M_cardiovascular"),
     course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/XEjOaVvQ"),
+      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
     course.starts = c(
       'S-BIOG-025'         = !"{W[8]+2} 13:00:00"),
     course.ends = c(
@@ -399,7 +399,7 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-025'         = !"C03Ia_{YY}M_cardiovascular"),
     course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/XEjOaVvQ"),
+      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
     course.starts = c(
       'S-BIOG-025'         = !"{W[8]+2} 13:00:00"),
     course.ends = c(
@@ -422,8 +422,8 @@ if (exists("challenge2"))
       'S-BIOG-025' = !"C03Ca_{21}M_ml_wine",
       'sdd3late'   = !"C03Ca_{21}M_ml_wine"),
     course.urls = c(
-      'S-BIOG-025' = "https://classroom.github.com/a/cHZ5HYlR",
-      'sdd3late'   = "https://classroom.github.com/a/cHZ5HYlR"),
+      'S-BIOG-025' = "https://classroom.github.com/a/...",
+      'sdd3late'   = "https://classroom.github.com/a/..."),
     course.starts = c(
       'S-BIOG-025' = !"{W[8]+4} 10:00:00",
       'sdd3late'   = !"{W[12]+2} 15:30:00"),
@@ -465,4 +465,3 @@ Dans ce module 3, vous aviez à réaliser les exercices suivants :
 ##### Progression {.unnumbered}
 
 `r launch_report("03", height = 800)`
-

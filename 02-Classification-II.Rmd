@@ -136,7 +136,7 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-025'         = !"C02Ia_{YY}M_ml2"),
     course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/akIwt7xd"),
+      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
     course.starts = c(
       'S-BIOG-025'         = !"{W[6]+5} 08:00:00"),
     course.ends = c(
@@ -376,7 +376,7 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-025'         = !"C02Ia_{YY}M_ml2"),
     course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/akIwt7xd"),
+      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
     course.starts = c(
       'S-BIOG-025'         = !"{W[6]+5} 08:00:00"),
     course.ends = c(
@@ -557,7 +557,7 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-025'         = !"C02Ia_{YY}M_ml2"),
     course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/akIwt7xd"),
+      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
     course.starts = c(
       'S-BIOG-025'         = !"{W[6]+5} 08:00:00"),
     course.ends = c(
@@ -595,7 +595,7 @@ if (exists("assignment2"))
     course.ids = c(
       'S-BIOG-025'         = !"C02Ga_{YY}M_optimisation"),
     course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/ATmhqQZo"),
+      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
     course.starts = c(
       'S-BIOG-025'         = !"{W[6]+5} 08:00:00"),
     course.ends = c(

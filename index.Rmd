@@ -63,17 +63,17 @@ La matière est divisée en six modules de 6h chacun en présentiel pour SDD III
 
 Les trois premiers modules de ce cours se concentrent sur les techniques de classification supervisée, encore appelées apprentissage machine (*machine learning* en anglais) qui prennent de plus en plus d'importance de nos jours dans tous les domaines, y compris la biologie. Ces techniques utilisent des algorithmes d'apprentissage à la base de l'intelligence artificielle et du "deep learning".
 
-Ensuite, deux modules sont consacrés à des données particulières avec des dépendances temporelles (les séries dites "spatio-temporelles" ou chronologiques). L'étude de phénomènes qui évoluent dans le temps est courant en biologie, et l'analyse de telles données nécessite l'utilisation de techniques statistiques adaptées que nous aborderons dans cette partie.
+Ensuite, deux modules sont consacrés à des données particulières avec des dépendances temporelles (les séries dites "spatio-temporelles" ou chronologiques). L'étude de phénomènes qui évoluent dans le temps est courante en biologie, et l'analyse de telles données nécessite l'utilisation de techniques statistiques adaptées que nous aborderons dans cette partie.
 
 Enfin, un dernier module est consacré à une initiation à l'analyse de données spatialisées et à la réalisation de cartes avec R. Ici aussi, il s'agit d'un aspect important pour beaucoup de biologistes, en particulier ceux qui travaillent sur le terrain.
 
 ### SDD IV : recherche reproductible {.unnumbered}
 
-Ce cours à option vient terminer la formation en science de données biologiques en approfondissant la gestion du code et des projets et en s'intéressant à un "écosystème logiciel" plus large avec les bases de données et le calcul sur le cloud. Le premier module permet de se familiariser avec des données particulières comme les dates, les données circulaires et le texte (y compris les expressions régulières). Le second module vise à s'organiser pour gérer au mieux un gros projet. Les quatre modules suivants abordent successivement la modularisation du code, son optimisation et test, la gestion de bases de données, et enfin, l'utilisation de packages R, de calcul en parallèle et sur le cloud. Un projet mettant en œuvre ces techniques plus avancées est également réalisé par les étudiants qui ont choisi de suivre ce cours.
+Ce cours à option vient terminer la formation en science de données biologiques en approfondissant la gestion du code et des projets et en s'intéressant à un "écosystème logiciel" plus large avec les bases de données et le calcul sur le cloud. Le premier module permet de se familiariser avec des données particulières comme les dates, les données circulaires et le texte (y compris les expressions régulières). Le second module vise à s'organiser pour gérer au mieux un gros projet. Les quatre modules suivants abordent successivement la modularisation du code, son optimisation et son test, la gestion de bases de données, et enfin, l'utilisation de packages R, de calcul en parallèle et sur le cloud. Un projet mettant en œuvre ces techniques plus avancées est également réalisé par les étudiants qui ont choisi de suivre ce cours.
 
 ## Matériel pédagogique {.unnumbered}
 
-Le matériel pédagogique, rassemblé dans ce syllabus interactif est aussi varié que possible. Vous pourrez ainsi piocher dans l'offre en fonction de vos envies et de votre profil d'apprenant pour optimiser votre travail. Vous trouverez :
+Le matériel pédagogique, rassemblé dans ce syllabus interactif, est aussi varié que possible. Vous pourrez ainsi piocher dans l'offre en fonction de vos envies et de votre profil d'apprenant pour optimiser votre travail. Vous trouverez :
 
 -   le présent ouvrage en ligne,
 
@@ -119,7 +119,7 @@ Ce livre en ligne ainsi que tout le matériel pédagogique cité plus haut a ét
 
 ### Classe inversée & pédagogie active {.unnumbered}
 
-Dans la plus grande partie de vos cours vous avez suivi **passivement** un cours *ex cathedra* suivi par une séance d'exercice ou de travaux pratiques.
+Dans la plus grande partie de vos cours, vous avez suivi **passivement** un cours *ex cathedra* suivi par une séance d'exercice ou de travaux pratiques.
 
 On peut schématiser ce mode d'apprentissage comme cela
 
@@ -133,14 +133,14 @@ Les cours de science des données utilisent une autre approche et se donnent en 
 
 ### Quatre niveaux d'exercices {.unnumbered}
 
-Quatre niveaux d'exercices de difficultés croissantes vous seront proposé.
+Quatre niveaux d'exercices de difficultés croissantes vous seront proposés.
 
 -   niveau I : découverte des notions dans des exercices rapides et ciblés intégrés au sein du cours en ligne.
 -   niveau II : appliquer les notions vues dans des exercices sous la forme de tutoriel très cadré
 -   niveau III : transférer les notions dans des projets individuels guidés sur des données biologiques
 -   niveau IV : Créer/réaliser des analyses sur des projets de groupe libre sur des données biologiques nouvelles grâce aux notions vues
 
-Chaque type d'exercice est associé à un outil présenté dans la matériel pédagogique.
+Chaque type d'exercice est associé à un outil présenté dans le matériel pédagogique.
 
 ![](images/00-preambule/apprendre2.png)
 

@@ -12,11 +12,11 @@
 
 #### Prérequis {.unnumbered}
 
-Pour comprendre les notions dans ce module, vous devez être capables de travailler dans RStudio et d'être familiarisé avec les scripts R et les fichiers R Markdown. Les fonctions sont, dans R, les briques de construction.
+Pour comprendre les notions dans ce module, vous devez être capables de travailler dans RStudio et d'être familiarisés avec les scripts R et les fichiers R Markdown. Les fonctions sont, dans R, les briques de construction.
 
 ## Les fonctions
 
-A chaque fois que vous utilisez R vous employez des fonctions sans plus y porter attention comme la fonction `mean()` par exemple. Vous pouvez cependant écrire vos propres fonctions qui seront adapté à votre problématique. La règle est assez simple, **si vous répétez des blocs de codes plus de deux fois, il faut réaliser une fonction**.
+À chaque fois que vous utilisez R vous employez des fonctions sans plus y porter attention comme la fonction `mean()` par exemple. Vous pouvez cependant écrire vos propres fonctions qui seront adaptées à votre problématique. La règle est assez simple, **si vous répétez des blocs de codes plus de deux fois, il faut réaliser une fonction**.
 
 L'utilisation de fonctions a plusieurs avantages :
 
@@ -32,7 +32,7 @@ Une fonction se présente comme ci-dessous :
 my_function(arg1, arg2)
 ```
 
-La fonction porte un nom explicite suivi de parenthèses. A l'intérieur des parenthèses, on retrouve les arguments de la fonction.
+La fonction porte un nom explicite suivi de parenthèses. À l'intérieur des parenthèses, on retrouve les arguments de la fonction.
 
 ```{block2, type="info"}
 Plusieurs fonction portant sur une même problématique se regroupe dans un package comme vous avez également l'habitude d'en utiliser comme `data.io`, `chart`, `knitr`. Néanmoins, ces notions ne seront pas détaillé au sein de ce module. Le package est très utile lorsque vous devez employer vos fonctions dans plusieurs projets différents.
@@ -40,7 +40,7 @@ Plusieurs fonction portant sur une même problématique se regroupe dans un pack
 
 ### Nom de la fonction et de ses arguments
 
-Si il y a bien une question qui va vous prendre la tête et qui requiert généralement un certain temps de réflexion c'est le nom de votre fonction et de ces arguments. Un nom mal choisi et/ou farfelu voue votre fonction à l'oubli. Il faut essayer d'avoir un nom court et évoquant le rôle de la fonction. Essayez de respecter la convention suivante qui veut que le nom d'une fonction est un verbe et le nom des arguments sont des noms. De plus, il est de plus en plus courant de respecter le snake_case (tout est en minuscule séparé par des sous-tirets)
+S’il y a bien une question qui va vous prendre la tête et qui requiert généralement un certain temps de réflexion c'est le nom de votre fonction et de ces arguments. Un nom mal choisi et/ou farfelu voue votre fonction à l'oubli. Il faut essayer d'avoir un nom court et évoquant le rôle de la fonction. Essayez de respecter la convention suivante qui veut que le nom d'une fonction soit un verbe et le nom des arguments soient des noms. De plus, il est de plus en plus courant de respecter le snake_case (tout est en minuscule séparé par des sous-tirets)
 
 ```{block2, type = "warning"}
 Au final, vous verrez que R n'est pas homogène. R est un language qui évolue au cours du temps et ce depuis 1993, ce qui explique ce manque d'homogénéité. Cependant, restez cohérent, fixez vous vos propres conventions et respectez les. 
@@ -60,7 +60,7 @@ Imaginons que vous écrivez plusieurs fonctions :
 Ne faites pas cela\ !!!!!! Soyez cohérent
 ```
 
-Tout comme pour le noms des fonctions, le noms des arguments est important. Les arguments se doivent d'être clairs. Il existe néanmoins des conventions d'usages
+Tout comme pour le nom des fonctions, le nom des arguments est important. Les arguments se doivent d'être clairs. Il existe néanmoins des conventions d'usage.
 
 -   `x`, `y`, `z` : vecteurs
 
@@ -68,13 +68,13 @@ Tout comme pour le noms des fonctions, le noms des arguments est important. Les 
 
 -   `df` : un tableau de données (*dataframe*)
 
--   `i`, `j` : indice numériques (par exemple pour spécifier les colonnes et les lignes d'un tableau de données)
+-   `i`, `j` : indice numérique (par exemple pour spécifier les colonnes et les lignes d'un tableau de données)
 
 -   `n` : une longueur particulière ou un nombre de lignes
 
 -   `p` : un nombre de colonnes
 
-Vous retrouverez en plus des arguments comme `na.rm`. Il s'agit également d'arguments conventionnels. Si vous avez le besoin d'exprimer la présence de valeur manquante dnas le but de les exclure de la fonction, ajoutez cette argument dans votre fonction.
+Vous retrouverez en plus des arguments comme `na.rm`. Il s'agit également d'arguments conventionnels. Si vous avez le besoin d'exprimer la présence de valeur manquante dans le but de les exclure de la fonction, ajoutez cet argument dans votre fonction.
 
 ## Documenter sa fonction
 
@@ -88,7 +88,7 @@ La documentation d'une fonction est une étape souvent négligée. Cependant, un
 ?dplyr::filter()
 ```
 
-En plaçant votre curseur sur votre fonction, cliquez sur l'onglet Code puis "Insert Roxygen Skeleton". Une squelette de documentation s'ajoute à votre fonction.
+En plaçant votre curseur sur votre fonction, cliquez sur l'onglet Code puis "Insert Roxygen Skeleton". Un squelette de documentation s'ajoute à votre fonction.
 
 ```{r}
 #' coefficient of variation (CV)
@@ -107,7 +107,7 @@ cv <- function(x) {
 }
 ```
 
--   Une vignette. Une vignette est un document au format R Markdown qui va détailler tout le cheminement qui vous as mené à votre fonction finale. Toutes les fonctions ne disposent pas d'une vignette comme vous pouvez vous en doutez.
+-   Une vignette. Une vignette est un document au format R Markdown qui va détailler tout le cheminement qui vous a mené à votre fonction finale. Toutes les fonctions ne disposent pas d'une vignette comme vous pouvez vous en douter.
 
 ```{r, eval = FALSE}
 # Pour prendre connaissance des vignettes disponible dans un package
@@ -121,13 +121,13 @@ vignette("dplyr", package = 'dplyr')
 
 -   [Comment créer une fonction dans R ?](https://abcdr.thinkr.fr/comment-creer-une-fonction-dans-r-function/) abcdR explique l'écriture des fonctions dans R en français.
 
--   [Ecrire vos propres fonctions R](http://www.sthda.com/french/wiki/ecrire-vos-propres-fonctions-r) stdah explique l'écriture des fonction dans R en français.
+-   [Écrire vos propres fonctions R](http://www.sthda.com/french/wiki/ecrire-vos-propres-fonctions-r) stdah explique l'écriture des fonctions dans R en français.
 
 -   [Writing functions in Nice R Code](https://nicercode.github.io/intro/writing-functions.html) Nice R code propose une explication sur l'écriture des fonctions pour les débutants en anglais.
 
 -   [Functions in Nice R Code](https://nicercode.github.io/guides/functions/) Nice R code propose une suite d'explication sur les fonctions à [Writing functions in Nice R Code](https://nicercode.github.io/intro/writing-functions.html) également en anglais.
 
--   [Chapter 19: Functions in R for DataScience](https://r4ds.had.co.nz/functions.html) R for Data Science propose un chapitre consacré à l'écriture des fonctions dans R en anglais. Ce livre est également disponible en français mais uniquement de manière payante chez Eyrolles <https://www.eyrolles.com/Informatique/Livre/r-pour-les-data-sciences-9782212675719/> .
+-   [Chapter 19: Functions in R for DataScience](https://r4ds.had.co.nz/functions.html) R for Data Science propose un chapitre consacré à l'écriture des fonctions dans R en anglais. Ce livre est également disponible en français, mais uniquement de manière payante chez Eyrolles <https://www.eyrolles.com/Informatique/Livre/r-pour-les-data-sciences-9782212675719/> .
 
 -   [Chapter Functions in Advance R](http://adv-r.had.co.nz/Functions.html) Advance R propose un chapitre consacré à l'écriture de fonction en anglais. Il permet de compléter vos connaissances suite à la lecture de [Chapter 19: Functions in R for DataScience](https://r4ds.had.co.nz/functions.html)
 

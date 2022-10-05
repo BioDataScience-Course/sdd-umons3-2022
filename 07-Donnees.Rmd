@@ -6,7 +6,7 @@
 SciViews::R
 ```
 
-Le cours SDD IV, comme son nom l'indique, est essentiellement axé svers le développement de pratiques qui rendront vos analyses reproductibles. Cela signifie que quelqu'un d'autre pourra reprendre votre code et générer exactement les mêmes résultats, tableaux et graphiques.
+Le cours SDD IV, comme son nom l'indique, est essentiellement axé vers le développement de pratiques qui rendront vos analyses reproductibles. Cela signifie que quelqu'un d'autre pourra reprendre votre code et générer exactement les mêmes résultats, tableaux et graphiques.
 
 Nous abordons plusieurs modules supplémentaires par rapport à la matière des 3 premiers cours.
 
@@ -36,7 +36,7 @@ Nous abordons plusieurs modules supplémentaires par rapport à la matière des 
 
 Avant de vous lancer dans ce cours, vous devez installer et vous familiariser avec la SciViews Box `r learnitdown$svbox`. Si ce n'est pas encore fait, retournez à la [page d'accueil pour bien débuter](%60r%20learnitdown$baseurl%60).
 
-RStudio et (R) Markdown ne doivent plus avoir de secrets pour vous.
+RStudio et (R) Markdown ne doivent plus avoir de secret pour vous.
 
 ##### À vous de jouer ! {.unnumbered}
 
@@ -58,13 +58,13 @@ La gestion du temps et les variables de temps peuvent sembler simples d'apparenc
 
 `r h5p(151, height = 270, toc = "Nombre de jours dans une année")`
 
-Si l'on tient compte du calendrier grégorien, des fuseaux horaires, du temps universel coordonné, de l'heure d'été, .... On s'aperçoit que le temps est complexe.
+Si l'on tient compte du calendrier grégorien, des fuseaux horaires, du temps universel coordonné, de l'heure d'été .... On s'aperçoit que le temps est complexe.
 
-Le calendrier grégorien est le calendrier le plus utilisé actuellement dans le monde. Ce calendrier définit qu'une année comprend 4 trimestres et 12 mois. Les mois varient en longueur entre 28 et 31 jours. Une semaine comprend 7 jours. Une année comprend 365 jours à l'exception des années bissextiles. Si vous n'avez pas mal de tête, on continue.
+Le calendrier grégorien est le calendrier le plus utilisé actuellement dans le monde. Ce calendrier défini qu'une année comprend 4 trimestres et 12 mois. Les mois varient en longueur entre 28 et 31 jours. Une semaine comprend 7 jours. Une année comprend 365 jours à l'exception des années bissextiles. Si vous n'avez pas mal de tête, on continue.
 
 Les fuseaux horaires ont eu pour objectif de définir une heure commune pour un espace géographique déterminé. C'est l'utilisation de chemin de fer qui a rendu la mise en place d'une heure commune indispensable.
 
-En pratique, une échelle de temps est utilisée comme référence par la majorité des pays du globe. Il s'agit du temps universel coordonné (UTC, *coordinated universal time*). Le terme GMT était utilisé précédemment. Il signifiait *Greenwich Mean time*. À ce temps de référence, on va ajouter ou soustraire un nombre entier (avec des exceptions comme dans tout système avec l'ajout ou la soustraction d'un nombre entier plus 30 ou 45 minutes).
+En pratique, une échelle de temps est utilisée comme référence par la majorité des pays du globe. Il s'agit du temps universel coordonné (UTC, *coordinated universal time*). Le terme GMT était utilisé précédemment. Il signifiait *Greenwich Mean Time*. À ce temps de référence, on va ajouter ou soustraire un nombre entier (avec des exceptions comme dans tout système avec l'ajout ou la soustraction d'un nombre entier plus 30 ou 45 minutes).
 
 UTC est un compromis entre le temps atomique international et temps universel. Il faut savoir que le temps universel coordonné est synchronisé avec la rotation de la Terre qui n'est pas fixe. Le service international de la rotation terrestre et des systèmes de référence décide de l'ajout de seconde, une seconde intercalaire (*leap second*) à UTC comme le premier janvier 2009.
 
@@ -196,7 +196,7 @@ fmutate(df, date = make_date(annee, mois, jour))
 
 Lorsque vous étudiez un phénomène biologique, il faut vous poser la question de la temporalité de votre expérience.
 
-> Est-ce que votre expérience dure quelques heures ? quelques jours ? quelques mois ? plusieurs années ?
+> Est-ce que votre expérience dure quelques heures ? Quelques jours ? Quelques mois ? Plusieurs années ?
 
 Cette question est cruciale pour traiter vos données. Prenons trois petits cas pratiques théoriques.
 
@@ -241,7 +241,7 @@ Lorsque l'on étudie le temps perdu dans les bouchons à Bruxelles. Il sera trè
 
 Lorsque l'on étudie des séries temporelles en écologie, on ne s'intéresse pas aux années bissextiles, ou au mois de 29 ou 31 jours.
 
-Le package {pastecs} propose de diviser une année en multiple de 4, 12, 48 périodes de temps, ... Une fréquence de 48 correspond environ à la semaine. Le tableau ci-dessous représente le temps en biologie.
+Le package {pastecs} propose de diviser une année en multiple de 4, 12, 48 périodes de temps ... Une fréquence de 48 correspond environ à la semaine. Le tableau ci-dessous représente le temps en biologie.
 
 | Temps    | Période |
 |----------|---------|
@@ -250,7 +250,7 @@ Le package {pastecs} propose de diviser une année en multiple de 4, 12, 48 pér
 | semaines | 48      |
 | jours    | 384     |
 
-En biologie, on va s'intéresser principalement à des cycles particuliers comme le cycle circadien, la succession des saisons, le cycle lunaire,...
+En biologie, on va s'intéresser principalement à des cycles particuliers comme le cycle circadien, la succession des saisons, le cycle lunaire...
 
 ##### Pour en savoir plus {.unnumbered}
 
@@ -280,15 +280,15 @@ if (exists("assignment"))
 
 ### Encodages
 
-Nous avons tous déjà été confrontés à ce genre de caractères `Ã©` ou `�`. Il s'agit d'un problème d'encodage. Vous avez peut-être déjà entendu les termes suivants ASCII, UTF-8, LATIN1,...
+Nous avons tous déjà été confrontés à ce genre de caractères `Ã©` ou `�`. Il s'agit d'un problème d'encodage. Vous avez peut-être déjà entendu les termes suivants, ASCII, UTF-8, LATIN1,...
 
 La problématique est de convertir une chaîne de caractères en bits qui sera interprétée par l'ordinateur. Il faut donc attribuer à chaque caractère un code unique. Cette série de codes va permettre la traduction des caractères. Les fameux termes cités précédemment sont les encodages qui permettent cette traduction.
 
 Historiquement, le code américain normalisé pour l'échange d'informations (*ASCII*, "American Standard Code for Information Interchange") a été l'un des premiers systèmes d'encodage proposés. Cet encodage se fait sur 8 bits par caractère, permettant ainsi 256 caractères maximum. Cette proposition était simple et adaptée uniquement à l'anglais. Il ne prenait par exemple pas en compte les accents de la langue française. Il s'en suit du développement de plusieurs systèmes d'encodages avec des adaptations spécifiques aux très nombreuses langues mondiales comme **ISO 8859** pour les langues latines (*ISO 8859-1*, *latin1*) ou encore ISO-2020 pour les langues asiatiques.
 
-Afin de réduire les problèmes d'encodage, un jeu universel de caractères a ensuite été développé : *ISO 10646*. Le consortium Unicode propose une surcouche à cette norme appelé *unicode*. Vous vous en doutez : plus il va y avoir des caractères plus le système d'encodage sera lourd et va utiliser un nombre de bits important pour chaque caractère. Le 8-bit limité à 256 caractères est ici largement insuffisant.
+Afin de réduire les problèmes d'encodage, un jeu universel de caractères a ensuite été développé : *ISO 10646*. Le consortium Unicode propose une surcouche à cette norme appelée *unicode*. Vous vous en doutez : plus il va y avoir des caractères plus le système d'encodage sera lourd et va utiliser un nombre de bits important pour chaque caractère. Le 8-bit limité à 256 caractères est ici largement insuffisant.
 
-Ainsi, l'*UTF-16* encode chaque caractère sur 16-bit, l'*UTF-32* sur 32-bit parce qu'il faut encore plus de caractères différents et enfin... l'*UTF-8* est apparu et a rapidement mis tout le monde d'accord (du moins dans le monde Unix/Linux et MacOS puisque Windows reste accroché à l'*UTF-16*). Vous allez dire, mais là, on revient en arrière si on encode sur 8-bit ! Pas tout-à-fait. En fait, avec *UTF-8*, l'encodage est **Variable**. La plupart des caractères courants (a-z, A-Z, 0-9, ponctuations usuelles, etc.) équivalents à l'ASCII sont encodés sur 8-bit. Mais un caractère particulier est préservé pour indiquer que, pour un caractère particulier, nous passons à 16-bit, ou à 32-bit, ou plus, il n'y a théoriquement pas de limites. Donc, *UTF-8* est compatible avec l'ASCII, compact pour un texte écrit avec des lettres latines, mais parfaitement extensibles et théoriquement capables d'encoder une infinité de caractères différents. Le souci, par contre, c'est qu'il n'est plus possible de déterminer la taille d'un texte en comptant simplement le nombre d'octets qui le compose. Toutes les fonctions de manipulation de textes doivent être adaptées !
+Ainsi, l'*UTF-16* encode chaque caractère sur 16-bit, l'*UTF-32* sur 32-bit parce qu'il faut encore plus de caractères différents et enfin... l'*UTF-8* est apparu et a rapidement mis tout le monde d'accord (du moins dans le monde Unix/Linux et MacOS puisque Windows reste accroché à l'*UTF-16*). Vous allez dire, mais là, on revient en arrière si on encode sur 8-bit ! Pas tout à fait. En fait, avec *UTF-8*, l'encodage est **Variable**. La plupart des caractères courants (a-z, A-Z, 0-9, ponctuations usuelles, etc.) équivalents à l'ASCII sont encodés sur 8-bit. Mais un caractère particulier est préservé pour indiquer que, pour un caractère particulier, nous passons à 16-bit, ou à 32-bit, ou plus, il n'y a théoriquement pas de limites. Donc, *UTF-8* est compatible avec l'ASCII, compact pour un texte écrit avec des lettres latines, mais parfaitement extensibles et théoriquement capables d'encoder une infinité de caractères différents. Le souci, par contre, c'est qu'il n'est plus possible de déterminer la taille d'un texte en comptant simplement le nombre d'octets qui le compose. Toutes les fonctions de manipulation de textes doivent être adaptées !
 
 Nous vous conseillons donc de toujours employer le format **UTF-8** qui est le format le plus universel qui soit. Si votre document ne contient que du texte, des chiffres et des ponctuations usuelles, vous pouvez à la limite vous limiter à ASCII qui est l'encodage qui a la plus large compatibilité. Dans la SciViews Box, l'encodage de textes par défaut est fixé à *UTF-8*, y compris sous Windows pour un maximum de comptabilités et d'interopérabilité.
 
@@ -386,7 +386,7 @@ id %>.%
 id_new
 ```
 
-En effet, le `.` a une signification particulière lors de l'utilisation de l'expression régulière que nous allons voir dans la section suivante.
+En effet le `.` a une signification particulière lors de l'utilisation de l'expression régulière que nous allons voir dans la section suivante.
 
 ##### Pour en savoir plus {.unnumbered}
 
@@ -439,7 +439,7 @@ class(species)
 
 Afin de gérer ce type de variable, nous pouvons aussi utiliser les objets **factor** dans R. La gestion correcte des variables facteurs dans R est particulière et peut mener à des erreurs. Nous vous conseillons la lecture de cet article sur le sujet [Wrangling categorical data in R](https://peerj.com/preprints/3163/).
 
-En R de base, la fonction qui permet de transformer une variable en une variable facteur est `factor()`. On retrouve des variantes à ces fonctions comme `as.factor()`, `as.ordered()` (ou encore `as_factor()` du package {forcats}). Nous vous conseillons d'utiliser `factor()` car cette fonction permet une gestion simple des variables facteurs. Il est important de comprendre la logique de gestion des facteurs dans R. Afin de gagner de la mémoire, R va attribuer à chaque niveau d'une variable facteur un nombre entier. Les niveaux vont être attribués par ordre alphabétique par défaut (mais vous pouvez proposer un autre ordre avec l'argument `levels=`).
+En R de base, la fonction qui permet de transformer une variable en une variable facteur est `factor()`. On retrouve des variantes à ces fonctions comme `as.factor()`, `as.ordered()` (ou encore `as_factor()` du package {forcats}). Nous vous conseillons d'utiliser, `factor()` car cette fonction permet une gestion simple des variables facteurs. Il est important de comprendre la logique de gestion des facteurs dans R. Afin de gagner de la mémoire, R va attribuer à chaque niveau d'une variable facteur un nombre entier. Les niveaux vont être attribués par ordre alphabétique par défaut (mais vous pouvez proposer un autre ordre avec l'argument `levels=`).
 
 ```{r}
 species_f <- factor(species)
@@ -605,7 +605,7 @@ Le tableau de l'ANOVA diffère légèrement, néanmoins nous reconnaissons sa st
 
 Vous avez maintenant compris le principe : avec des variables circulaires, nous devons prendre des précautions particulières. Mais à condition d'utiliser les versions graphiques et numériques adaptées, nous pouvons analyser alors correctement nos données.
 
-Les variables circulaires ne sont pas limitées à une orientation dans l'espace. Les cycles (circadiens, saisonniers, ...) peuvent aussi être analysés à l'aide de ce type de variables. En réalité, tout ce qui est cyclique le peut. Par exemple, les huîtres suivent un cycle de croissance gonadique, maturation, ponte, et enfin résorption des gonades lors d'un cycle sexuel. Si les différents stades sont exprimés numériquement (stade 1 à stade 5, le stade 5 étant égal au stade 0), nous pourrons traiter également cette information sous forme d'une variable circulaire. Nous devons juste être attentifs à utiliser les bons arguments dans son encodage à l'aide de la fonction `circular()`.
+Les variables circulaires ne sont pas limitées à une orientation dans l'espace. Les cycles (circadiens, saisonniers ...) peuvent aussi être analysés à l'aide de ce type de variables. En réalité, tout ce qui est cyclique le peut. Par exemple, les huîtres suivent un cycle de croissance gonadique, maturation, ponte, et enfin résorption des gonades lors d'un cycle sexuel. Si les différents stades sont exprimés numériquement (stade 1 à stade 5, le stade 5 étant égal au stade 0), nous pourrons traiter également cette information sous forme d'une variable circulaire. Nous devons juste être attentifs à utiliser les bons arguments dans son encodage à l'aide de la fonction `circular()`.
 
 Outre une orientation dans l'espace avec `template = "geographics"`, `circular()` prend aussi automatiquement en compte les cycles circadiens avec `template = "clock24"`. Voici, par exemple, des données concernant l'heure d'arrivée aux urgences de patients sur une période de 12 mois.
 
@@ -648,7 +648,7 @@ rose.diag(hospital$admission_c, bin = 24, col = "lightblue",
   main = "Admissions [h]", prop = 9, radii.scale = "linear")
 ```
 
-Pour d'autres types de données, nous devons spécifier complètement le système que nous souhaitons utiliser. Pour nos huîtres qui présentes 5 stades de maturité de leurs gonades, nous ferions (données générées artificiellement) :
+Pour d'autres types de données, nous devons spécifier complètement le système que nous souhaitons utiliser. Pour nos huîtres qui présentent cinq stades de maturité de leurs gonades, nous ferions (données générées artificiellement) :
 
 ```{r}
 set.seed(37843)
@@ -708,6 +708,6 @@ if (exists("assignment"))
 
 ## Récapitulatif des exercices
 
-Ce module vous a permis de prendre connaissance des principes de bases des données temporelles, des données textuelles et des variables circulaires. Pour évaluer votre compréhension de cette matière vous aviez les exercices suivants à réaliser :
+Ce module vous a permis de prendre connaissance des principes de bases des données temporelles, des données textuelles et des variables circulaires. Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 
 `r show_ex_toc()`

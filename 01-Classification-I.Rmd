@@ -338,14 +338,14 @@ Vous pouvez retrouver des indices supplémentaires via le lien suivant : [Stati
 
 Ce projet est un projet par groupe. **Les groupes doivent correspondre aux rangées de la salle de cours.**
 
-```{r assign_C01Ga_metrique, echo=FALSE, results='asis'}
+```{r assign_C01Ga_metrics, echo=FALSE, results='asis'}
 if (exists("assignment2"))
-  assignment2("C01Ga_metrique", part = NULL,
-    url = "https://github.com/BioDataScience-Course/C01Ga_metrique",
+  assignment2("C01Ga_metrics", part = NULL,
+    url = "https://github.com/BioDataScience-Course/C01Ga_metrics",
     course.ids = c(
-      'S-BIOG-025'         = !"C01Ga_{YY}M_metrique"),
+      'S-BIOG-025'         = !"C01Ga_{YY}M_metrics"),
     course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
+      'S-BIOG-025'         = "https://classroom.github.com/a/I3apm73-"),
     course.starts = c(
       'S-BIOG-025'         = !"{W[5]+1} 08:00:00"),
     course.ends = c(
@@ -604,7 +604,7 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-025'         = !"C01Ia_{YY}M_debug"),
     course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
+      'S-BIOG-025'         = "https://classroom.github.com/a/Rmwhilea"),
     course.starts = c(
       'S-BIOG-025'         = !"{W[5]+1} 08:00:00"),
     course.ends = c(
@@ -630,7 +630,7 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-025'         = !"C01Ib_{YY}M_lda"),
     course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
+      'S-BIOG-025'         = "https://classroom.github.com/a/SGc7abMA"),
     course.starts = c(
       'S-BIOG-025'         = !"{W[5]+4} 10:00:00"),
     course.ends = c(

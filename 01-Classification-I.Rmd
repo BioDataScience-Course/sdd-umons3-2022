@@ -2,6 +2,8 @@
 
 # Classification supervisée I {#classif1}
 
+<!--# TODO: Mettre en évidence les différentes catégories de métriques: multiclasses, 2 classes et composite (F-score et balanced accuracy) + parler dans une section optionnelle des méthodes micro- et macroaverage -->
+
 ```{r setup, results='hide', warning=FALSE, include=FALSE}
 SciViews::R # We don't add "ml" here to show later on what it gives
 ```

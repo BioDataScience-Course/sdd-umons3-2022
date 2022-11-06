@@ -114,6 +114,10 @@ pima_prior <- structure(as.numeric(pima_prior), names = names(pima_prior))
 pima_prior
 ```
 
+```{block2, type = 'note'}
+Dans le cas où les probabilités *a priori* ne sont pas calculée à partir des données, mais sont obtenues depuis la littérature, il suffit de créer un vecteur numerique avec `c()` en nommant les différentes probabilités du même nom que les niveaux de la variable facteur réponse. Par exemple, ici, notre variable réponse a les niveaux `neg` et `pos`. Si nous trouvons l'information que la prévaleuce du diabète dans cette population est de 13.5%, nous écrirons nos probabilités *a priori* comme `pima_prior <- c(neg = 0.865, pos = 0.135)`. La somme des probabilités doit être de un.
+```
+
 Ensuite, de nombreux algorithmes de classification peuvent nous renvoyer des probabilités d'appartenir à une classe, comme prédit par le classifieur indépendamment des proportions relatives par classe (la prédiction de la classe n'est que celle qui a la probabilité la plus élevée, en réalité). L'arbre de probabilités (résolution graphique), ou un calcul simple de probabilités faisant intervenir le théorème de Bayes (résolution numérique) permet de combiner les probabilités *a priori* et les probabilités issues du classifieur pour calculer ce que nous appelons les **probabilités *a posteriori***, c'est-à-dire les probabilités d'être A ou B approchant les valeurs que nous observerons en déploiement de notre classifieur. Ce calcul nous l'avions déjà fait dans le [module 7 du cours I](https://wp.sciviews.org/sdd-umons/?iframe=wp.sciviews.org/sdd-umons-2021/probabilit%25C3%25A9s.html). Nous ne redéveloppons pas ces calculs ici. Encore une fois, vous êtes invité à relire cette section si vous ne comprenez pas de quoi il s'agit.
 
 Dans {mlearning}, les probabilités *a priori* peuvent être injectées dans l'objet **confusion** pour corriger nos métriques en faveur de valeurs plus réalistes relatives aux probabilités *a posteriori*. Donc, pour nos métriques obtenues à l'aide du set d'apprentissage `pima1b` aux proportions modifiées, nous rétablissons des valeurs plus plausibles par rapport à la population étudiée, et en même temps, plus comparables avec les métriques sur `pima1` en procédant comme suit :
@@ -138,11 +142,11 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-025'         = !"C03Ia_{YY}M_cardiovascular"),
     course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
+      'S-BIOG-025'         = "https://classroom.github.com/a/jZS8UtF9"),
     course.starts = c(
-      'S-BIOG-025'         = !"{W[8]+2} 13:00:00"),
+      'S-BIOG-025'         = !"{W[9]+1} 08:00:00"),
     course.ends = c(
-      'S-BIOG-025'         = !"{W[15]+5} 23:59:59"),
+      'S-BIOG-025'         = !"{W[9]+1} 10:30:00"),
     term = "Q1", level = 3,
     toc = "Métriques en fonction des proportions")
 ```
@@ -226,24 +230,6 @@ pROC::auc(pima1b_resampled$diabetes, pima1b_resampled$membership)
 ```
 
 Nous pouvons observer que notre second classifieur `pima1b` est effectivement globalement légèrement plus performant que le premier avec `pima1`, avec toutefois des précautions d'usage puisque les données utilisées ne sont pas *strictement* identiques. Seulement les proportions relatives dans les deux classes ont été alignées entre les deux courbes. Par contre, selon le seuil de détection choisi, le modèle établi avec `pima1` peut localement égaler, ou même dépasser légèrement les performances de celui établi à l'aide de `pima1b`. De manière générale, les courbes ROC seront parfaitement utilisables *sans ajustement nécessaire par contre,* pour comparer deux modèles différents obtenus à partir d'exactement les *mêmes* données.
-
-##### À vous de jouer ! {.unnumbered}
-
-```{r assign_C03Ia_cardiovascular_II, echo=FALSE, results='asis'}
-if (exists("assignment"))
-  assignment("C03Ia_cardiovascular", part = "II",
-    url = "https://github.com/BioDataScience-Course/C03Ia_cardiovascular",
-    course.ids = c(
-      'S-BIOG-025'         = !"C03Ia_{YY}M_cardiovascular"),
-    course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
-    course.starts = c(
-      'S-BIOG-025'         = !"{W[8]+2} 13:00:00"),
-    course.ends = c(
-      'S-BIOG-025'         = !"{W[15]+5} 23:59:59"),
-    term = "Q1", level = 3,
-    toc = "Courbe ROC")
-```
 
 ## Machine à vecteurs supports
 
@@ -337,6 +323,24 @@ Avec un *F* micro de 0.747 et un *F* macro de 0.739, nous nous rapprochons très
 
 L'algorithme SVM est potentiellement très performant, mais il est délicat parce que de nombreux paramètres doivent être optimisés. Nous n'avons discuté que le noyau, mais il y a aussi la mise à l'échelle des variables ou non, la pondération des observations, etc. comme paramètres optimisables.
 
+##### À vous de jouer ! {.unnumbered}
+
+```{r assign_C03Ia_cardiovascular_II, echo=FALSE, results='asis'}
+if (exists("assignment"))
+  assignment("C03Ia_cardiovascular", part = "II",
+    url = "https://github.com/BioDataScience-Course/C03Ia_cardiovascular",
+    course.ids = c(
+      'S-BIOG-025'         = !"C03Ia_{YY}M_cardiovascular"),
+    course.urls = c(
+      'S-BIOG-025'         = "https://classroom.github.com/a/jZS8UtF9"),
+    course.starts = c(
+      'S-BIOG-025'         = !"{W[9]+1} 08:00:00"),
+    course.ends = c(
+      'S-BIOG-025'         = !"{W[9]+1} 10:30:00"),
+    term = "Q1", level = 3,
+    toc = "SVM et courbes ROC")
+```
+
 ##### Pour en savoir plus {.unnumbered}
 
 -   [Une explication des SVM plus en détails](https://zestedesavoir.com/tutoriels/1760/un-peu-de-machine-learning-avec-les-svm/) (en français)
@@ -397,27 +401,26 @@ Malheureusement, l'apprentissage profond nécessite une quantité importante de 
 
 Le jeu de données [MNIST](http://yann.lecun.com/exdb/mnist/) est un jeu de données ultra-classique et historique dans le développement de l'apprentissage profond. Il s'agit de plusieurs dizaines de milliers de chiffres manuscrits qui ont été numérisés. Le but est de créer un classifieur capable de reconnaître l'écriture manuscrite de nombres en reconnaissance, donc les chiffres de 0 à 9. La résolution de ce problème dans R est présentée [ici](https://tensorflow.rstudio.com/tutorials/beginners/). C'est un excellent point de départ si vous voulez vous lancer dans l'apprentissage profond. Dans le cadre de ce cours, nous n'irons cependant pas plus loin. Sachez toutefois que les meilleurs classifieurs en apprentissage profond sont actuellement capables de faire aussi bien, *voire mieux* dans la lecture de nombres en écriture manuscrite qu'un opérateur humain.
 
+```{r assign_C02Ga_optimisation_II, echo=FALSE, results='asis'}
+if (exists("assignment2"))
+  assignment2("C02Ga_optimisation", part = "II",
+    url = "https://github.com/BioDataScience-Course/C02Ga_optimisation",
+    course.ids = c(
+      'S-BIOG-025'         = !"C02Ga_{YY}M_optimisation"),
+    course.urls = c(
+      'S-BIOG-025'         = "https://classroom.github.com/a/6rpy6XjB"),
+    course.starts = c(
+      'S-BIOG-025'         = !"{W[7]+1} 9:00:00"),
+    course.ends = c(
+      'S-BIOG-025'         = !"{W[9]+4} 23:59:59"),
+    term = "Q1", level = 4, n = 4,
+    toc = "Optimisation de classifieur",
+    clone = TRUE)
+```
+
 ##### Pour en savoir plus {.unnumbered}
 
 Cette [vidéo](https://www.youtube.com/watch?v=UOvPeC8WOt8&feature=youtu.be) explique dans le détail le principe de fonctionnement d'un réseau profond et l'illustre justement sur l'apprentissage de la classification de chiffres manuscrits.
-
-##### À vous de jouer ! {.unnumbered}
-
-```{r assign_C03Ia_cardiovascular_III, echo=FALSE, results='asis'}
-if (exists("assignment"))
-  assignment("C03Ia_cardiovascular", part = "III",
-    url = "https://github.com/BioDataScience-Course/C03Ia_cardiovascular",
-    course.ids = c(
-      'S-BIOG-025'         = !"C03Ia_{YY}M_cardiovascular"),
-    course.urls = c(
-      'S-BIOG-025'         = "https://classroom.github.com/a/..."),
-    course.starts = c(
-      'S-BIOG-025'         = !"{W[8]+2} 13:00:00"),
-    course.ends = c(
-      'S-BIOG-025'         = !"{W[15]+5} 23:59:59"),
-    term = "Q1", level = 3,
-    toc = "Réseau de neurones et SVM")
-```
 
 ## Challenge
 
@@ -430,17 +433,17 @@ if (exists("challenge2"))
   challenge2("C03Ca_ml_wine", part = NULL,
     url = "https://github.com/BioDataScience-Course/C03Ca_ml_wine",
     course.ids = c(
-      'S-BIOG-025' = !"C03Ca_{21}M_ml_wine",
-      'sdd3late'   = !"C03Ca_{21}M_ml_wine"),
+      'S-BIOG-025' = !"C03Ca_{YY}M_ml_wine",
+      'sdd3late'   = !"C03Ca_{YY}M_ml_wine"),
     course.urls = c(
-      'S-BIOG-025' = "https://classroom.github.com/a/...",
-      'sdd3late'   = "https://classroom.github.com/a/..."),
+      'S-BIOG-025' = "https://classroom.github.com/a/CPFNk7Jy",
+      'sdd3late'   = "https://classroom.github.com/a/CPFNk7Jy"),
     course.starts = c(
-      'S-BIOG-025' = !"{W[8]+4} 10:00:00",
-      'sdd3late'   = !"{W[12]+2} 15:30:00"),
+      'S-BIOG-025' = !"{W[9]+4} 13:00:00",
+      'sdd3late'   = !"{W[9]+4} 13:00:00"),
     course.ends = c(
-      'S-BIOG-025' = !"{W[8]+4} 13:00:00",
-      'sdd3late'   = !"{W[12]+2} 18:00:00"),
+      'S-BIOG-025' = !"{W[9]+4} 18:00:00",
+      'sdd3late'   = !"{W[9]+4} 18:00:00"),
     level = 4, n = 2,
     toc = "Challenge machine learning (vins)")
 ```

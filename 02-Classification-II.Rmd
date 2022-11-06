@@ -526,9 +526,9 @@ Maintenant que vous avez découvert différents algorithmes de classification su
 
 Vous allez maintenant discuter par équipe ces différents aspects. **Les équipes seront désignées par vos encadrants. Ne créez encore aucun projet avant qu'il ne vous soit dit de le faire. Au sein de chaque équipe un responsable de la création du "team" sera désigné, et ensuite, les autres participants se placeront dans ce même "team".**
 
-```{r assign_C02Ga_optimisation, echo=FALSE, results='asis'}
+```{r assign_C02Ga_optimisation_I, echo=FALSE, results='asis'}
 if (exists("assignment2"))
-  assignment2("C02Ga_optimisation", part = NULL,
+  assignment2("C02Ga_optimisation", part = "I",
     url = "https://github.com/BioDataScience-Course/C02Ga_optimisation",
     course.ids = c(
       'S-BIOG-025'         = !"C02Ga_{YY}M_optimisation"),

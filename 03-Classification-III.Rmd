@@ -146,7 +146,7 @@ if (exists("assignment"))
     course.starts = c(
       'S-BIOG-025'         = !"{W[9]+1} 08:00:00"),
     course.ends = c(
-      'S-BIOG-025'         = !"{W[9]+1} 10:30:00"),
+      'S-BIOG-025'         = !"{W[9]+3} 18:00:00"),
     term = "Q1", level = 3,
     toc = "Métriques en fonction des proportions")
 ```
@@ -336,7 +336,7 @@ if (exists("assignment"))
     course.starts = c(
       'S-BIOG-025'         = !"{W[9]+1} 08:00:00"),
     course.ends = c(
-      'S-BIOG-025'         = !"{W[9]+1} 10:30:00"),
+      'S-BIOG-025'         = !"{W[9]+3} 18:00:00"),
     term = "Q1", level = 3,
     toc = "SVM et courbes ROC")
 ```
@@ -412,7 +412,7 @@ if (exists("assignment2"))
     course.starts = c(
       'S-BIOG-025'         = !"{W[7]+1} 9:00:00"),
     course.ends = c(
-      'S-BIOG-025'         = !"{W[9]+4} 23:59:59"),
+      'S-BIOG-025'         = !"{W[9]+5} 23:59:59"),
     term = "Q1", level = 4, n = 4,
     toc = "Optimisation de classifieur",
     clone = TRUE)
@@ -439,11 +439,11 @@ if (exists("challenge2"))
       'S-BIOG-025' = "https://classroom.github.com/a/CPFNk7Jy",
       'sdd3late'   = "https://classroom.github.com/a/CPFNk7Jy"),
     course.starts = c(
-      'S-BIOG-025' = !"{W[9]+4} 13:00:00",
-      'sdd3late'   = !"{W[9]+4} 13:00:00"),
+      'S-BIOG-025' = !"{W[9]+3} 13:00:00",
+      'sdd3late'   = !"{W[9]+3} 13:00:00"),
     course.ends = c(
-      'S-BIOG-025' = !"{W[9]+4} 18:00:00",
-      'sdd3late'   = !"{W[9]+4} 18:00:00"),
+      'S-BIOG-025' = !"{W[9]+3} 18:00:00",
+      'sdd3late'   = !"{W[9]+3} 18:00:00"),
     level = 4, n = 2,
     toc = "Challenge machine learning (vins)")
 ```

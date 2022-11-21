@@ -595,6 +595,24 @@ Enfin, terminons en signalant que si la méthode est prévue pour traiter unique
 
 ##### À vous de jouer ! {.unnumbered}
 
+##### À vous de jouer ! {.unnumbered}
+
+```{r assign_C04Ga_ts_cheatsheet, echo=FALSE, results='asis'}
+if (exists("assignment2"))
+  assignment2("C04Ga_ts_cheatsheet", part = "II",
+    url = "https://github.com/BioDataScience-Course/C04Ga_ts_cheatsheet",
+    course.ids = c(
+      'S-BIOG-025'         = !"C04Ga_{YY}M_ts_cheatsheet"),
+    course.urls = c(
+      'S-BIOG-025'         = "https://classroom.github.com/a/iR4ZA6YN"),
+    course.starts = c(
+      'S-BIOG-025'         = !"{W[11]+1} 08:00:00"),
+    course.ends = c(
+      'S-BIOG-025'         = !"{W[13]+5} 23:59:59"),
+    term = "Q1", level = 3,
+    toc = "Aide-mémoire sur les séries chronologiques (suite)")
+```
+
 ```{r assign_C05Gb_ts_adv, echo=FALSE, results='asis'}
 if (exists("assignment2"))
   assignment2("C05Gb_ts_adv", part = NULL,

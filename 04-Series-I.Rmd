@@ -847,6 +847,26 @@ Nous avons identifié deux phases. La première commence à la première observa
 
 Si vous avez affaire à un objet **mts**, n'oubliez pas d'extraire la série que vous voulez traiter avec `local.trend()` à l'aide de l'opérateur `[,]`.
 
+##### À vous de jouer ! {.unnumbered}
+
+<!-- r learnr("C04Lb_ts_analysis", title = "Analyse des séries chronologiques", toc = "Analyse des objets ts") -->
+
+```{r assign_C04Ga_ts_cheatsheet, echo=FALSE, results='asis'}
+if (exists("assignment2"))
+  assignment2("C04Ga_ts_cheatsheet", part = "I",
+    url = "https://github.com/BioDataScience-Course/C04Ga_ts_cheatsheet",
+    course.ids = c(
+      'S-BIOG-025'         = !"C04Ga_{YY}M_ts_cheatsheet"),
+    course.urls = c(
+      'S-BIOG-025'         = "https://classroom.github.com/a/iR4ZA6YN"),
+    course.starts = c(
+      'S-BIOG-025'         = !"{W[11]+1} 08:00:00"),
+    course.ends = c(
+      'S-BIOG-025'         = !"{W[13]+5} 23:59:59"),
+    term = "Q1", level = 3,
+    toc = "Aide-mémoire sur les séries chronologiques")
+```
+
 ##### Exercez-vous {.unnumbered}
 
 Appliquez la technique des sommes cumulées sur les diverses séries d'exemples pour vous familiariser avec son utilisation, en particulier la partie interactive avec `identify()` dans la console R de RStudio :
@@ -857,8 +877,6 @@ Appliquez la technique des sommes cumulées sur les diverses séries d'exemples 
 -   De même pour `marbio`et `marphy` où nous savons d'emblée qu'il existe différentes phases successives correspondant aux différentes masses d'eaux traversées par le transect.
 
 ##### À vous de jouer ! {.unnumbered}
-
-<!-- r learnr("C04Lb_ts_analysis", title = "Analyse des séries chronologiques", toc = "Analyse des objets ts") -->
 
 ```{r assign_C04Ia_ts, echo=FALSE, results='asis'}
 if (exists("assignment"))

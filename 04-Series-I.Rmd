@@ -863,8 +863,9 @@ if (exists("assignment2"))
       'S-BIOG-025'         = !"{W[11]+1} 08:00:00"),
     course.ends = c(
       'S-BIOG-025'         = !"{W[13]+5} 23:59:59"),
-    term = "Q1", level = 3,
-    toc = "Aide-mémoire sur les séries chronologiques")
+    term = "Q1", level = 4, n = 4,
+    toc = "Aide-mémoire sur les séries chronologiques",
+    clone = TRUE)
 ```
 
 ##### Exercez-vous {.unnumbered}

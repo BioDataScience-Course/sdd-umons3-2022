@@ -18,6 +18,10 @@ SciViews::R("ts")
 
 Ce module nécessite d'être à l'aise avec R, RStudio et R Markdown. Les six premiers modules du cours 1 (en particulier, la [visualisation](https://wp.sciviews.org/sdd-umons/?iframe=wp.sciviews.org/sdd-umons-2022/visu1.html) et la [manipulation des données](https://wp.sciviews.org/sdd-umons/?iframe=wp.sciviews.org/sdd-umons-2022/import.html)) doivent être acquis. La notion de corrélation ([module 12 du cours 1](https://wp.sciviews.org/sdd-umons/?iframe=wp.sciviews.org/sdd-umons-2022/correlation.html)) doit également être bien comprise au départ.
 
+```{block2, type = 'note'}
+Nous utiliserons ici essentiellement le package R {pastecs} qui est une réécriture entre autres par l'un des auteurs de ce cours du logiciel PASSTEC 2000, un programme écrit en visual basic par le [Prof. Frédéric Ibañez](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4247415/) dans les années 1980, sous la direction de ce dernier. C'est au Prof. Ibañez que l'on doit d'avoir rassemblé un grand nombre de techniques utiles en écologie et en biologie en général en matière d'analyse de séries spatio-temporelles, et d'en avoir démontré l'utilité quelque fois pour la première fois.
+```
+
 ## Observations dépendantes du temps
 
 Démarrons tout de suite notre étude des séries chronologiques par plusieurs exemples concrets qui vont nous emmener dans les plaines enneigées du Grand Nord canadien, au sommet d'un volcan à Hawaï, dans le cerveau d'un patient épileptique ou au large de la mer Méditerranée.
@@ -707,22 +711,22 @@ Une meilleure version de ce test est réalisée par *bootstrap*. Cette technique
 
 ##### Exemples {.unnumbered}
 
-Testons la tendance dans `co2` en bootstrapant 999 fois notre série (on a donc 1000 valeurs de $\rho$ avec la valeur observée dans l'échantillon de départ.)
+Testons la tendance dans `co2` en bootstrappant 999 fois notre série (on a donc 1000 valeurs de $\rho$ avec la valeur observée dans l'échantillon de départ.)
 
 ```{r}
 set.seed(9037)
 (co2_trend_test <- trend.test(co2, R = 999))
 ```
 
-Le calcul est plus long, mais nous n'avons plus l'avis concernant les ex æquos, car ceux-ci sont pris en compte dans la distribution bootstrapée. Nous voyons que la fonction `tsboot()` est utilisée en interne. C'est cette fonction qui prend en compte l'autocorrélation temporelle de la série dans le calcul. Mais comment interpréter ce test ? Nous devons passer par une représentation graphique de la distribution bootstrapée :
+Le calcul est plus long, mais nous n'avons plus l'avis concernant les ex æquos, car ceux-ci sont pris en compte dans la distribution bootstrappée. Nous voyons que la fonction `tsboot()` est utilisée en interne. C'est cette fonction qui prend en compte l'autocorrélation temporelle de la série dans le calcul. Mais comment interpréter ce test ? Nous devons passer par une représentation graphique de la distribution bootstrappée :
 
 ```{r}
 plot(co2_trend_test)
 ```
 
-L'histogramme à gauche représente la distribution de $\rho$, mais après transformation $t = \rho \cdot \sqrt(\frac{n - 2}{1 - \rho^2})$, nous obtenons en fait une statistique qui suit à peu près une distribution *t* de Student. Sa valeur bootstrapée est notée $t^*$. Le trait vertical en pointillé représente la valeur observée dans notre série originale. Nous déterminons combien de fois $t^*$ est plus extrême (c'est-à-dire, plus grand en valeur absolue) que $t$ pour un test bilatéral. Ceci représente une estimation de la valeur *p* du test qui est confrontée à $\alpha$. Donc, si la valeur *p* \< $\alpha$, nous rejetons $H_0$ et concluons qu'une tendance générale significative au seuil $\alpha$ existe dans la série.
+L'histogramme à gauche représente la distribution de $\rho$, mais après transformation $t = \rho \cdot \sqrt(\frac{n - 2}{1 - \rho^2})$, nous obtenons en fait une statistique qui suit à peu près une distribution *t* de Student. Sa valeur bootstrappée est notée $t^*$. Le trait vertical en pointillé représente la valeur observée dans notre série originale. Nous déterminons combien de fois $t^*$ est plus extrême (c'est-à-dire, plus grand en valeur absolue) que $t$ pour un test bilatéral. Ceci représente une estimation de la valeur *p* du test qui est confrontée à $\alpha$. Donc, si la valeur *p* \< $\alpha$, nous rejetons $H_0$ et concluons qu'une tendance générale significative au seuil $\alpha$ existe dans la série.
 
-Le graphique de droite vous est familier. Il s'agit d'un graphique quantile-quantile qui compare la distribution $t^*$ à une distribution théorique *t* de Student. Nous voyons ici que les deux distributions correspondent bien. Cela signifie que la distribution bootstrapée est quasi confondue à une *t* de Student. Donc, le test simple non bootstrapé est parfaitement valable dans ce cas-ci (et se calcule bien plus rapidement).
+Le graphique de droite vous est familier. Il s'agit d'un graphique quantile-quantile qui compare la distribution $t^*$ à une distribution théorique *t* de Student. Nous voyons ici que les deux distributions correspondent bien. Cela signifie que la distribution bootstrappée est quasi confondue à une *t* de Student. Donc, le test simple non bootstrappé est parfaitement valable dans ce cas-ci (et se calcule bien plus rapidement).
 
 Pour obtenir la valeur *p* du test, nous faisons :
 
@@ -738,7 +742,7 @@ boot::boot.ci(co2_trend_test, conf = 0.95, type = "norm")
 
 Comme cet intervalle de confiance ne contient pas zéro, nous en concluons toujours que nous rejetons $H_0:$. Notez bien que les résultats peuvent varier quelque peu d'un bootstrap à l'autre, et que nous avons utilisé `set.seed(x)`, en prenant bien soin d'utiliser un nombre `x` différent à chaque fois et pris au hasard, afin de rendre notre analyse reproductible dans ce cours en ligne.
 
-Maintenant que nous avons compris comment utiliser le test bootstrapé sur un exemple où la tendance générale est flagrante, voyons sur un jeu de données plus problématique : `eeg`. Vu la longueur de la série, nous nous limitons à `R = 99`, mais plus le nombre de valeurs calculées est grand, plus le résultat est précis naturellement.
+Maintenant que nous avons compris comment utiliser le test bootstrappé sur un exemple où la tendance générale est flagrante, voyons sur un jeu de données plus problématique : `eeg`. Vu la longueur de la série, nous nous limitons à `R = 99`, mais plus le nombre de valeurs calculées est grand, plus le résultat est précis naturellement.
 
 ```{r}
 set.seed(1563)
@@ -757,7 +761,7 @@ eeg_trend_test$p.value
 plot(eeg_trend_test)
 ```
 
-La distribution n'est pas très différente d'une *t* de Student, et d'autre part, la valeur *p* vaut 6%, donc juste supérieure à un seuil $\alpha$ de 5% que nous avons choisi avant de faire ce test. Nous en concluons que nous ne rejetons pas $H_0$ et que cette série ne comporte pas de tendance générale significative à ce seuil. Dans le cas présent, la valeur *p* bootstrapée n'est pas très différente de celle calculée à l'aide d'un test paramétrique considérant une distribution théorique idéale. Ceci se produit lorsque les deux distributions (bootstrapée *versus* théorique) sont similaires, ce que le graphique quantile-quantile de droite nous confirme.
+La distribution n'est pas très différente d'une *t* de Student, et d'autre part, la valeur *p* vaut 6%, donc juste supérieure à un seuil $\alpha$ de 5% que nous avons choisi avant de faire ce test. Nous en concluons que nous ne rejetons pas $H_0$ et que cette série ne comporte pas de tendance générale significative à ce seuil. Dans le cas présent, la valeur *p* bootstrappée n'est pas très différente de celle calculée à l'aide d'un test paramétrique considérant une distribution théorique idéale. Ceci se produit lorsque les deux distributions (bootstrappée *versus* théorique) sont similaires, ce que le graphique quantile-quantile de droite nous confirme.
 
 ##### Pour en savoir plus {.unnumbered}
 

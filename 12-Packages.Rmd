@@ -1,32 +1,32 @@
 # Packages et cloud {#packages}
 
-#### Objectifs {-}
+#### Objectifs {.unnumbered}
 
-- Appréhender les notions liées aux packages
+-   Appréhender les notions liées aux packages
 
-- Apprendre à créer un package
+-   Apprendre à créer un package
 
-- ...
+-   ...
 
-#### Prérequis {-}
+#### Prérequis {.unnumbered}
 
-Vous devez  être familiarisés avec l'écriture et la documentation de fonction.
+Vous devez être familiarisés avec l'écriture et la documentation de fonction (module 9 de ce cours).
 
 Vous devez également être familiarisés avec les tests unitaires.
 
 # Le package
 
-À chaque utilisation R, vous employez des fonctions sans plus y porter attention comme la fonction `labelise()` par exemple. Cette fonction provient du package `data.io`. Un package est tout simplement un ensemble de fonctions documentées, de jeu de données, des applications Shiny,... Vous pouvez très facilement retrouver des informations sur les packages que vous utilisez en cliquant sur l'onglet `Packages` dans RStudio. Vous y trouverez la liste des packages que vous avez sur votre ordinateur, une courte description et le numéro de la version de ce package. Nous reviendrons plus en détail sur le numéro de version lors de la création de votre premier package.
+À chaque utilisation R, vous employez des fonctions sans plus y porter attention comme la fonction `labelise()` par exemple. Cette fonction provient du package {data.io}. Un package est un ensemble de fonctions documentées, de jeu de données, de vignettes (des tutoriels)... Vous pouvez très facilement retrouver des informations sur les packages que vous utilisez en cliquant sur l'onglet `Packages` dans RStudio. Vous y trouverez la liste des packages que vous avez installés sur votre ordinateur, une courte description et le numéro de la version de ce package. Nous reviendrons plus en détail sur le numéro de version lors de la création de votre premier package.
 
-L’utilisation de package a de nombreux avantages\ : 
+L'utilisation de packages R a de nombreux avantages :
 
-- On évite de répéter des fonctions dans des script R de projet en projet.
+-   On évite de répéter des fonctions dans des script R de projet en projet.
 
-- On limite les possibilités de bug entre les script R.
+-   On limite les possibilités de bug entre les script R.
 
-- Les fonctions d'un package sont documentées.
+-   Les fonctions d'un package sont documentées.
 
-- On rend notre code plus lisible
+-   On rend notre code plus lisible.
 
 ## Création d'un package
 
@@ -40,6 +40,7 @@ Avant de vous lancer dans la création d'un package, il faut lui trouver un nom.
 available::available(name= "nom_potentiel_du_package")
 ```
 
+```{=html}
 <!---- G.E.
 - description d'un package
 - devtools_history.R pour la reproductibilité
@@ -51,9 +52,10 @@ available::available(name= "nom_potentiel_du_package")
 - intégration continue
 - ...
 --->
+```
+##### Pour en savoir plus {.unnumbered}
 
-##### Pour en savoir plus {-}
+-   [Créer un package R en quelques minutes](https://thinkr.fr/creer-package-r-quelques-minutes/), courte explication sur la création d'un package R, en français.
 
-- [Créer un package R en quelques minutes](https://thinkr.fr/creer-package-r-quelques-minutes/) : courte explication sur la création d'un package R
+-   [{usethis}](https://usethis.r-lib.org), documentation d'un package qui aide à réaliser des packages, en anglais.
 
-- [{usethis}](https://usethis.r-lib.org) : Documentation d'un package qui aide à réaliser des packages.
